@@ -51,7 +51,7 @@ func testDiscovery(client *goconsul.Client) {
 		panic(err)
 	}
 
-	insArray, err := client.DiscoverInstancesWithName("test-service", 1)
+	insArray, err := client.DiscoverInstancesWithName("test-service", nil, 1)
 	if err != nil {
 		panic(err)
 	}
